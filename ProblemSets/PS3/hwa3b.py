@@ -122,39 +122,38 @@ print("\n alpha_GMM = {}, rho_GMM = {}, and mu_GMM = {}".format(GA2step_alpha_GM
 print("\nValue of Minimized Criterion: {}".format(p2_criterion((GA2step_alpha_GMM, GA2step_rho_GMM, GA2step_mu_GMM), gmm_args)))
 ga2step_results
 
-def Jac_err2(xvals, mu, sigma, cut_lb, cut_ub, simple=False):
-    '''
-    This function computes the Jacobian matrix of partial derivatives of the R x 1 moment
-    error vector e(x|theta) with respect to the K parameters theta_i in the K x 1 parameter vector
-    theta. The resulting matrix is R x K Jacobian.
-    '''
-    Jac_err = np.zeros((2, 2))
-    h_mu = 1e-8 * mu
-    h_sig = 1e-8 * sigma
-    Jac_err[:, 0] = \
-        ((err_vec(xvals, mu + h_mu, sigma, cut_lb, cut_ub, simple) -
-          err_vec(xvals, mu - h_mu, sigma, cut_lb, cut_ub, simple)) / (2 * h_mu)).flatten()
-    Jac_err[:, 1] = \
-        ((err_vec(xvals, mu, sigma + h_sig, cut_lb, cut_ub, simple) -
-          err_vec(xvals, mu, sigma - h_sig, cut_lb, cut_ub, simple)) / (2 * h_sig)).flatten()
-    
-    return Jac_err
 
 def p2_jacob(df, alpha, rho, mu):
     beta = 0.99
     h_alpha = 1e-8 * alpha
     h_rho = 1e-8 * rho
     h_mu = 1e-8 * mu
-    jdf = pd.DataFrame()
     evec_alpha = p2_err_vec(df, alpha + h_alpha, rho, mu) - p2_err_vec(df, alpha - h_alpha, rho, mu)
     evec_rho = p2_err_vec(df, alpha , rho + h_rho, mu) - p2_err_vec(df, alpha , rho - h_rho, mu)
     evec_mu = p2_err_vec(df, alpha, rho, mu + h_mu) - p2_err_vec(df, alpha, rho, mu - h_mu)
-        
-    
+    jdf = pd.DataFrame({"1": evec_alpha,
+                    "2": evec_rho,
+                    "3":evec_mu})
+    return np.array(jdf)
 
 
+n = len(df)-1
+d_err = p2_jacob(df, GA2step_alpha_GMM, GA2step_rho_GMM, GA2step_mu_GMM)
+SigHat2 = (1 / n) * lin.inv(d_err.T @ new_w @ d_err)
+print(SigHat2)
 
+print('Std. err. alpha_hat=', np.sqrt(SigHat2[0, 0]))
+print('Std. err. rho_hat=', np.sqrt(SigHat2[1, 1]))
+print('Std. err. mu_hat=', np.sqrt(SigHat2[2, 2]))
 
+N = pts.shape[0]
+d_err2 = Jac_err2(pts, mu_GMM1, sig_GMM1, 0.0, 450.0, False)
+print(d_err2)
+print(W_hat)
+SigHat2 = (1 / N) * lin.inv(d_err2.T @ W_hat @ d_err2)
+print(SigHat2)
+print('Std. err. mu_hat=', np.sqrt(SigHat2[0, 0]))
+print('Std. err. sig_hat=', np.sqrt(SigHat2[1, 1]))
 
 
 
