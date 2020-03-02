@@ -28,7 +28,7 @@ This page lists the projects and project members for each project group. It also
 | Yutao Chen      | Opinion dynamics | Deffuant (2006) |
 | Erin Eidschun   | Estimating trade parameters by GMM | Nyman (2008) |
 | Dave Foote and Jesus Pacheco | Female labor participation and child care | Ribar (1995) |
-| Xiangyu Ma      | Economics of art: book reviews | ? |
+| Xiangyu Ma      | Marriage matching |  |
 | Meng Yang       | Banking system markups |  Hortacsu (2018) |
 | Kento Yoshizawa | Forward vs. backward inflation expectations | Gali, et al (1999) |
 | Frederick Zhu   | Sovereign default with renegotiation | Uribe, Chap 13. |
@@ -36,18 +36,26 @@ This page lists the projects and project members for each project group. It also
 
 ## Project presentation times
 
-### Wednesday, March 11
-| Time slot    | Presenter | Topic |
-|----------------|-------------------------|-----------------|
-|  9:00 -  9:20a |               |  |
-|  9:25 -  9:45a |    |  |
-|  9:50 - 10:10a |         |  |
-| 10:15 - 10:35a |         |  |
-|                |          |  |
-| 10:40 - 11:00a |   |  |
-| 11:05 - 11:25a |               |  |
-| 11:30 - 11:50a |  |  |
+For project presentations on Tuesday, March 10, only the presenter(s) is (are) required to attend as those presentations will be held outside of normal class time in the conference room in 1155 E 60th Street (room 222). However, classmates are encouraged to attend. Non-presenting students are also encouraged to attend the class presentations on Wednesday, March 11, but only the presenter is required.
 
+### Tuesday, March 10
+|  Time slot     |   Presenter   | Topic |
+|----------------|---------------|-------|
+|  1:30 -  1:50p |               |       |
+|  1:55 -  2:15p |               |       |
+|  2:20 -  2:50p |               |       |
+|  2:55 -  3:15p |               |       |
+|  3:20 -  3:50p |               |       |
+
+### Wednesday, March 11
+|  Time slot     |   Presenter   | Topic |
+|----------------|---------------|-------|
+|  9:50 - 10:10a |               |       |
+| 10:15 - 10:35a |               |       |
+| 10:40 - 11:00a |               |       |
+|  1:30 -  1:50p |               |       |
+|  1:55 -  2:15p |               |       |
+|  2:20 -  2:50p |               |       |
 
 
 ## Project LaTeX template
