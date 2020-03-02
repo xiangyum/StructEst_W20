@@ -12,18 +12,6 @@
 \usepackage{amsmath,amssymb}
 \usepackage[latin1]{inputenc}
 
-%Code snippets and syntax highlighting
-\usepackage{listings}
-%Settings for Listings
-\lstset{
-  language=Python,
-  basicstyle=\ttfamily,
-  keywordstyle=\color{blue}\ttfamily,
-  stringstyle=\color{red}\ttfamily,
-  commentstyle=\color{green}\ttfamily,
-  morecomment=[l][\color{magenta}]{\#}
-}
-
 \usepackage{array}
 \usepackage{threeparttable}
 \usepackage{colortbl}
@@ -41,7 +29,7 @@
 \setbeamercovered{dynamic}
 
 \title[Short version of title]{Full version of title}
-\author[FirstAuthor and SecondAuthor]{\textbf{First Author} \and \textbf{Second Author}}
+\author{\textbf{Xiangyu Ma}}
 \date{February 2019}
 
 
@@ -69,30 +57,6 @@
     \end{block}
   }
 
-
-\section{Images}
-
-  \begin{frame}
-  \frametitle{Here is an image}
-    \begin{figure}[htb]\centering
-    \fbox{\resizebox{3.5in}{2.7in}{\includegraphics{images/ability_log_2D.png}}}
-    \end{figure}
-  \end{frame}
-
-
-\section{Tables}
-
-  \frame{
-  \frametitle{Here is a table}
-    \begin{tabular}{>{\small}c >{\small}l >{\small}r}
-      \hline\hline
-      Variable & Description & Value \\
-      \hline
-      $\beta$ & discount factor & 0.96 \\
-      $\alpha$ & capital share of income & 0.35 \\
-      \hline\hline
-    \end{tabular}
-  }
 
 
 \end{document}

@@ -1,0 +1,18 @@
+---
+title: "Structural Estimation of Aesthetic Judgements?"
+author: "Xiangyu Ma"
+date: "2/19/2020"
+output: beamer_presentation
+---
+
+# Research Question
+
+
+
+# the Model
+
+
+# Data
+
+## Web-scraped data from a popular book-reading website
+
